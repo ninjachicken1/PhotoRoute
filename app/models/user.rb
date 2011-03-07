@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   def self.authenticate(name, password)
     user = self.find_by_name(name)
     if user
-      expected_password = encrypted_password(password, user.salt)
+      expected_password = User.encrypted_password(password, user.salt)
       if user.hashed_password != expected_password
         user = nil
       end
@@ -28,7 +28,9 @@ class User < ActiveRecord::Base
     @password = pwd
     return if pwd.blank?
     create_new_salt
+    old_pwd = self.hashed_password
     self.hashed_password = User.encrypted_password(self.password, self.salt)
+    puts "***** Made it past password= setter, old(#{old_pwd}), new(#{self.hashed_password})"
   end
 
 private

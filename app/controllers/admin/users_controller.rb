@@ -1,5 +1,3 @@
-require File.dirname(__FILE__) + '/../../models/users'
-
 module Admin
   class UsersController < ApplicationController
     # GET /admin/users
@@ -30,7 +28,6 @@ module Admin
     # POST /admin/users
     def create
       @user = User.new(params[:user])
-      
       respond_to do |format|
         if @user.save
           flash[:notice] = "User #{@user.name} was successfully created."
@@ -57,7 +54,8 @@ module Admin
           flash[:notice] = "Successfully updated user '#{@user.name}'."
           format.html { redirect_to :action => 'index' }
         else
-          flash[:warning] = "An error occurred trying to save the user 'params[:user][:name]', please try again."
+          flash[:warning] = "An error occurred trying to save the user '#{params[:user][:name]}', please try again."
+          format.html { redirect_to :controller => 'admin/users', :action => 'edit', :id => params[:id] }
         end
       end
     end
