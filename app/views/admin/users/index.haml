@@ -1,0 +1,18 @@
+%h4 User List
+%table
+  %tr
+    %th Name
+ 
+  - if !@users.nil?
+    - for user in @users
+      %tr
+        %td= h user.name
+        %td= link_to 'Show', { :controller => 'admin/users', :action => 'show', :id => user.id }
+        %td= link_to 'Edit', { :controller => 'admin/users', :action => 'edit', :id => user.id }
+        %td= link_to 'Destroy', { :controller => 'admin/users', :action => 'destroy', :id => user.id }, 
+          :confirm => 'Are you sure?', :method => :delete
+
+%br/
+
+-# - link_to 'New user', new_user_path
+= link_to 'New user', :controller => 'admin/users', :action => 'new'

@@ -1,0 +1,3 @@
+Todo: Rake Tasks
+- create admin user at the start
+- set s3 username + password

@@ -1,0 +1,8 @@
+%h4 Edit User
+- form_for [:admin, @user] do |user_form|
+  = user_form.text_field :name
+  = user_form.text_field :display_name
+  = user_form.text_field :password
+  = user_form.text_field :password_confirmation
+  %div
+    = user_form.submit "Update User" , :class => "submit"

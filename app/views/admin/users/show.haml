@@ -1,1 +1,23 @@
-user:show
+%h4 User Details
+%table
+  %tr
+    %td Id:
+    %td= @user.id
+  %tr
+    %td Nickname:
+    %td= @user.display_name
+  %tr
+    %td Deleted:
+    %td= @user.deleted
+  %tr
+    %td Hashed Password:
+    %td= @user.hashed_password
+  %tr
+    %td Salt
+    %td= @user.salt
+  %tr
+    %td Created At:
+    %td= @user.created_at
+  %tr
+    %td Updated At:
+    %td= @user.updated_at

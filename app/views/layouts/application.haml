@@ -1,0 +1,22 @@
+%html
+  %head
+    %title PhotoROUTE
+    = stylesheet_link_tag 'photoroute'
+  %body#store
+    #banner<
+      = image_tag 'logo.jpg', :size => '50x40'
+      = @page_title || 'PhotoROUTE'
+    #columns
+      #side
+        %a Home
+        %br/
+        %a FAQ
+        %br/
+        %a News
+        %br/
+        %a Contact
+        %br/
+      #main
+        - if flash[:notice]
+          #notice= flash[:notice]
+        = yield :layout

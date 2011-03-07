@@ -1,1 +1,20 @@
-user:new
+%h4 New User
+%div
+  - form_for :user, @user, :url => { :action => 'create' }, :html => {:class => "nifty_form"} do |f|
+    = f.error_messages
+    %fieldset
+      %legend Enter User Details
+      %div
+        = f.label :name
+        = f.text_field :name, :size => 40
+      %div
+        = f.label :display_name
+        = f.text_field :display_name, :size => 40
+      %div
+        = f.label :password, 'Password'
+        = f.password_field :password, :size => 40
+      %div
+        = f.label :password_confirmation, 'Confirm'
+        = f.password_field :password_confirmation, :size => 40
+      %div
+        = f.submit "Add User" , :class => "submit"

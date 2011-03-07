@@ -1,6 +1,6 @@
 require 'digest/sha1'
 
-class Users < ActiveRecord::Base
+class User < ActiveRecord::Base
   validates_uniqueness_of   :name
   validates_presence_of     :name
   
