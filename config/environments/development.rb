@@ -15,3 +15,9 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+# Add in some GEMS
+config.gem "rails-footnotes", :source => "http://rubygems.org"
+
+# Setup an ActiveRecord logger in /log/activerecord.log
+ActiveRecord::Base.logger = Logger.new(File.dirname(__FILE__) + '/../../log/activerecord.log')
