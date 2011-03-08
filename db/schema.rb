@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110308144647) do
   create_table "path_waypoints", :force => true do |t|
     t.integer  "path_id"
     t.integer  "waypoint_id"
-    t.float    "order"
+    t.float    "seq"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

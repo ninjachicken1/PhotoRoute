@@ -1,7 +1,76 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+waypoint_chris_run_1:
+  user: chris
+  source_image_urn: flickr:123
+  image_urn:  s3:12"3
+  latlng: "111,222"
+  taken:  "2011-01-01 00:00:00"
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+waypoint_chris_run_2:
+  user: chris
+  source_image_urn: flickr:234
+  image_urn:  s3:234
+  latlng: "111,223"
+  taken:  "2011-01-01 00:00:00"
+  
+waypoint_chris_run_3:
+  user: chris
+  source_image_urn: flickr:345
+  image_urn:  s3:345
+  latlng: "111,224"
+  taken:  "2011-01-01 00:00:00"
+
+waypoint_chris_commute1:
+  user: chris
+  source_image_urn: flickr:456
+  image_urn:  s3:456
+  latlng: "111,100"
+  taken:  "2011-01-01 00:00:00"
+
+waypoint_chris_commute2:
+  user: chris
+  source_image_urn: flickr:567
+  image_urn:  s3:567
+  latlng: "112,100"
+  taken:  "2011-01-01 00:00:10"
+
+waypoint_chris_commute3:
+  user: chris
+  source_image_urn: flickr:678
+  image_urn:  s3:678
+  latlng: "113,100"
+  taken:  "2011-01-01 00:00:20"
+
+waypoint_chris_commute4:
+  user: chris
+  source_image_urn: flickr:789
+  image_urn:  s3:789
+  latlng: "114,100"
+  taken:  "2011-01-01 00:00:30"
+
+waypoint_chris_commute5:
+  user: chris
+  source_image_urn: flickr:890
+  image_urn:  s3:890
+  latlng: "115,100"
+  taken:  "2011-01-01 00:00:40"
+
+waypoint_chris_commute6:
+  user: chris
+  source_image_urn: flickr:098
+  image_urn:  s3:098
+  latlng: "116,100"
+  taken:  "2011-01-01 00:55:42"
+
+waypoint_john_trip_sd_1:
+  user: john
+  source_image_urn: flickr:987
+  image_urn:  s3:987
+  latlng: "111,100"
+  taken:  "2011-01-01 00:00:00"
+
+waypoint_john_trip_sd_2:
+  user: john
+  source_image_urn: flickr:876
+  image_urn:  s3:876
+  latlng: "222,222"
+  taken:  "2011-01-04 00:00:00"

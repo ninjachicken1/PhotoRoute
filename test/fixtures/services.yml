@@ -1,7 +1,11 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+chris_flickr:
+  user: chris
+  service_type: 0
+  service_uname:  photoroute.net
+  service_pwd:  photoroute.net
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+john_flickr:
+  user: john
+  service_type: 0
+  service_uname:  photoroute.net
+  service_pwd:  photoroute.net

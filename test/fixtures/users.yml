@@ -1,7 +1,12 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# one:
-#   column: value
-#
-# two:
-#   column: value
+chris:
+  name: chris
+  display_name: chris
+  hashed_password:  6dbaea52dc2e52cb9a6c77ebb822e288a7df6ab2
+  salt: "21765058000.505046255910258"
+  
+john:
+  name: john
+  display_name: john
+  hashed_password:  3ac6ea4eb29cb15224ba215ae499e84df61aa5fe
+  salt: "21749582000.302134758611618"
+  

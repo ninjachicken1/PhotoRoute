@@ -22,7 +22,7 @@ class CreatePathsWaypointsJoins < ActiveRecord::Migration
     create_table :path_waypoints do |t|
       t.integer   :path_id
       t.integer   :waypoint_id
-      t.float     :order
+      t.float     :seq
       t.timestamps
     end
   end

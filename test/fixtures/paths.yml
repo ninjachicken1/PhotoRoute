@@ -1,7 +1,23 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+chris_run:
+  user: chris
+  name: first run
+  description:  running around home
+  image_urn:  s3:chris_path_run_image
+  path_type:  run
+  duration: 31:12
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+chris_commute:
+  user: chris
+  name: first commute
+  description:  commute to work
+  image_urn:  s3:chris_path_commute_image
+  path_type:  commute
+  duration: 55:42
+  
+john_trip:
+  user: john
+  name: san diego trip
+  description:  trip to san diego
+  image_urn:  s3:john_path_trip_sd
+  path_type:  trip
+  duration: 72:00

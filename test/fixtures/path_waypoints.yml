@@ -1,7 +1,54 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+pathwaypoint1:
+  path: chris_run
+  waypoint: waypoint_chris_run_1
+  seq: "1"
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+pathwaypoint2:
+  path: chris_run
+  waypoint: waypoint_chris_run_2
+  seq: "1"
+
+pathwaypoint3:
+  path: chris_run
+  waypoint: waypoint_chris_run_3
+  seq: "1"
+
+pathwaypoint4:
+  path: chris_commute
+  waypoint: waypoint_chris_commute_1
+  seq: "1"
+
+pathwaypoint5:
+  path: chris_commute
+  waypoint: waypoint_chris_commute_2
+  seq: "1"
+
+pathwaypoint6:
+  path: chris_commute
+  waypoint: waypoint_chris_commute_3
+  seq: "1"
+
+pathwaypoint7:
+  path: chris_commute
+  waypoint: waypoint_chris_commute_4
+  seq: "1"
+
+pathwaypoint8:
+  path: chris_commute
+  waypoint: waypoint_chris_commute_5
+  seq: "1"
+
+pathwaypoint9:
+  path: chris_commute
+  waypoint: waypoint_chris_commute_6
+  seq: "1"
+
+pathwaypoint10:
+  path: john_trip
+  waypoint: waypoint_john_trip_sd_1
+  seq: "1"
+
+pathwaypoint11:
+  path: john_trip
+  waypoint: waypoint_john_trip_sd_2
+  seq: "1"
