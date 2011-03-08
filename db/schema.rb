@@ -9,7 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110301140259) do
+ActiveRecord::Schema.define(:version => 20110308144647) do
+
+  create_table "path_waypoints", :force => true do |t|
+    t.integer  "path_id"
+    t.integer  "waypoint_id"
+    t.float    "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paths", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "description", :default => ""
+    t.string   "image_urn",   :default => ""
+    t.string   "path_type"
+    t.string   "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "services", :force => true do |t|
     t.integer  "user_id"
@@ -26,6 +45,16 @@ ActiveRecord::Schema.define(:version => 20110301140259) do
     t.boolean  "deleted",         :default => false
     t.string   "hashed_password"
     t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "waypoints", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "source_image_urn"
+    t.string   "image_urn"
+    t.string   "latlng"
+    t.datetime "taken"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

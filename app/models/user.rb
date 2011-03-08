@@ -1,6 +1,12 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  # Associations
+  has_many :services
+  has_many :paths
+  has_many :waypoints
+  
+  # Validations
   validates_uniqueness_of   :name
   validates_presence_of     :name
   
