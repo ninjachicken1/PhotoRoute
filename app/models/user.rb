@@ -36,7 +36,6 @@ class User < ActiveRecord::Base
     create_new_salt
     old_pwd = self.hashed_password
     self.hashed_password = User.encrypted_password(self.password, self.salt)
-    puts "***** Made it past password= setter, old(#{old_pwd}), new(#{self.hashed_password})"
   end
 
 private
