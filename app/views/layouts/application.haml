@@ -17,6 +17,7 @@
         %a Contact
         %br/
       #main
-        - if flash[:notice]
-          #notice= flash[:notice]
+        - for name in [:notice, :warning, :message, :error] 
+          - if flash[name]
+            %div{:id => name.to_s, class => ".rails-notice"} flash[name]          
         = yield :layout

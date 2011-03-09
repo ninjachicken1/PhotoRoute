@@ -8,6 +8,7 @@ class SubscribersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
+    @user.display_name = @user.name
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id

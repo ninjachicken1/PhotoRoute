@@ -1,5 +1,5 @@
 module Admin
-  class UsersController < ApplicationController
+  class UsersController < AuthenticatedController
     # GET /admin/users
     def index
       @users = User.all

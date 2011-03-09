@@ -5,6 +5,11 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 </head>
 <body>
+  <% for name in [:notice, :warning, :message, :error] %>
+    <% if flash[name] %>
+      <%= "<div id=\"#{name}\" class=\"rails-notice\">#{flash[name]}</div>" %>
+    <% end %>
+  <% end %>
   <div id="wrap" class="group">
     <div id="content">
       <div class="wrap">
