@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>PhotoROUTE</title>
+  <link rel="stylesheet" href="stylesheets/welcome.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+  <div id="wrap" class="group">
+    <div id="content">
+      <div class="wrap">
+        <div class="iphone" id="iphone">
+          <img src="images/iphone3.png"/>
+          <!--<div id="iphone-overlay" style="background-image: url(images/screenshot2.jpg); background-repeat: no-repeat no-repeat;"></div>-->
+        </div>
+        <div class="content"> 
+          <img src="images/PhotoRoute.png" class="instagram-title" alt="PhotoROUTE, let your photos draw your map for you."/> 
+          <div class="tab"> 
+              <img src="images/welcome-map.png" class="paper-clips"> 
+              <div class="tab-content">
+                  <p id="try-photoroute">
+                      Try PhotoROUTE Today!
+                  </p>
+                  <!--<img src="images/PhotoRoute.png" class="meet-instagram" alt="PhotoRouteBanner."/> -->
+                  <p> 
+                      Take a series of photos with geographical information and plot a route on a map displaying the location of each picture.
+                  </p> 
+                  <p> 
+                      Store multiple sets of photos to track your running routes, commutes, vacation trips, or anything else you dream up.  Each series also uses the time information to display a total trip duration.
+                  </p> 
+                  <p> 
+                      Import your photos from Flickr or upload directly to the site.
+                  </p> 
+                  <p>
+                    <form>
+                      
+                      <input type="submit" value="Login" onClick="location.href='<%= url_for 'login' %>'">&nbsp;&nbsp;
+                      <input type="submit" value="Sign Up" onClick="location.href='<%= url_for 'signup' %>'">
+                    </form>
+                  </p>
+              </div> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+  </div>
+</body>
+</html>

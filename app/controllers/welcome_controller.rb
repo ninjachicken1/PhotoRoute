@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   # GET /welcome
   def index    
     respond_to do |format|
-      format.html
+      format.html { render :template => "welcome/welcome.html.erb", :layout => false }
     end
   end
   

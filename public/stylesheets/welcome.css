@@ -1,0 +1,93 @@
+body {
+    color: #563c13;
+    background: url(http://localhost:3000/images/welcome-background.png) repeat-x;
+    font-size: 12px;
+}
+#try-photoroute {
+  font-size: 16px;
+  font-weight: bold;
+}
+.wrap {
+    width: 810px;
+    margin: 0 auto;
+}
+.iphone {
+  padding-top: 40px;
+  width: 281px;
+  float: left;
+  position:relative;
+}
+.iphone .free-badge {
+    position: absolute;
+    top: 20px;
+    left: -35px;
+}
+.content {
+    float:left;
+    margin-left: 10px;
+    position: relative;
+    width: 509px;
+}
+.content .instagram-title {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+}
+.content .tab {
+    margin-top: 250px;
+    height: 300px;
+    background: url(http://localhost:3000/images/folder-background.png) 0 0 no-repeat;
+    padding: 30px 7% 0 7%;
+    width: 86%;
+}
+.content .paper-clips {
+    position: absolute;
+    top: 250px;
+    left: 0px;
+}
+.content .tab-content {
+    padding-left: 120px;
+}
+.content p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+.tab-content img.meet-instagram {
+    margin-bottom: 1em;
+}
+#iphone-overlay {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: url(images/screenshot2.jpg);
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  color: #563C13;
+  display: block;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  height: 355px;
+  left: 20px;
+  line-height: 17px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  position: absolute;
+  text-align: left;
+  top: 136px;
+  vertical-align: baseline;
+  width: 238px;  
+}
+
