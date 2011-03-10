@@ -1,0 +1,18 @@
+%h1 List Paths
+
+%table
+  %tr
+    %th Name
+ 
+  - if !@paths.nil?
+    - for path in @paths
+      %tr
+        %td= h path.name
+        %td= link_to 'Show', { :controller => 'paths', :action => 'show', :id => path.id }
+        %td= link_to 'Edit', { :controller => 'paths', :action => 'edit', :id => path.id }
+        %td= link_to 'Destroy', { :controller => 'paths', :action => 'destroy', :id => path.id }, 
+          :confirm => 'Are you sure?', :method => :delete
+
+%br/
+
+= link_to 'New Path', new_path_path

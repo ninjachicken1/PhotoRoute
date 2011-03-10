@@ -1,0 +1,12 @@
+- form_for :path, @path, :url => edit_path_path, :html => {:class => "nifty_form"} do |f|
+  = f.error_messages
+  %fieldset
+    %legend Edit Path
+    %div
+      = f.label :name
+      = f.text_field :name, :size => 40
+    %div
+      = f.label :description
+      = f.text_field :description, :size => 40
+    %div
+    = f.submit "Save"

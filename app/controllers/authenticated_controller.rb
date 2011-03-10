@@ -12,7 +12,7 @@ class AuthenticatedController < ActionController::Base
   def require_login
     unless current_user
       flash[:error] = "You must be logged in to access this page."
-      redirect_to (:controller => '/welcome')
+      redirect_to(:controller => '/welcome')
     end
   end
 end

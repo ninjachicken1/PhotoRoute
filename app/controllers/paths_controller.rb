@@ -27,6 +27,11 @@ class PathsController < AuthenticatedController
   end
   
   def edit
+    @path = Path.find_by_id_and_user_id(params[:id], current_user.id)
+    if @path.blank?
+      flash[:error] = "Could not retrieve the specified path."
+      redirect_to paths_url
+    end
   end
   
   def update
