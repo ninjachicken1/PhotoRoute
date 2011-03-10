@@ -4,6 +4,19 @@ class PathsController < AuthenticatedController
   end
   
   def show
+    @path = Path.find_by_id_and_user_id(params[:id], current_user.id)
+    if @path
+      respond_to do |format|
+        format.html
+      end
+    else
+      repond_to do |format|
+        format.html {
+          flash[:error] = "Could not find the path '#{params[:id]}'."
+          redirect_to paths_path
+        }
+      end
+    end
   end
   
   def new
