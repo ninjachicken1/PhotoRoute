@@ -35,6 +35,16 @@ class PathsController < AuthenticatedController
   end
   
   def update
+    @path = Path.find_by_id_and_user_id(params[:id], current_user.id)
+    respond_to do |format|
+      if @path.update_attributes(params[:path])
+        flash[:notice] = "Updated path '#{@path.name}'."
+        format.html { redirect_to paths_path }
+      else
+        flash.now[:error] = "An error occurred updating the path with id '#{params[:id]}'."
+        format.html { render "edit" }
+      end
+    end
   end
   
   def destroy
