@@ -1,11 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-  # Authentication
+  # Authentication (mixture of public and authenticated paths)
   map.logout '/logout', :controller => 'login', :action => 'destroy', :conditions => { :method => :get }
   map.resource 'login', :only => [:new, :create], :path_names => { :new => '' }, :controller => 'login'
   map.resources 'subscribers', :except => [:index]
 
   # Authenticated pages
-  map.resources 'paths'
+  map.resources :points, :controller => 'waypoints'
+  map.resources :paths do |paths|
+    paths.resources :points, :controller => 'pathwaypoints'
+  end
 
   # Admin-only pages
   map.namespace :admin do |admin|

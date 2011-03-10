@@ -1,3 +1,5 @@
+%h4 Edit Path
+
 - form_for (@path) do |f|
   = f.error_messages
   %fieldset
@@ -10,4 +12,12 @@
       = f.text_field :description, :size => 40
     %div
     = f.submit "Save"
-    
+
+%div Path Points:
+- form_tag path_points_path(@path) do
+  - @path.path_waypoints.each do |pp|
+    %div
+      = text_field_tag "points_#{pp.id}", pp.seq, :size => 3
+      = link_to "(#{pp.waypoint.latlng}) #{pp.waypoint.image_urn}", point_path(pp.waypoint)
+  %div
+    = submit_tag "Update Order of Points"

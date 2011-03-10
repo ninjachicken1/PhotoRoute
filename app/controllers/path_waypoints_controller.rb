@@ -1,0 +1,2 @@
+class PathWaypointsController < ApplicationController
+end

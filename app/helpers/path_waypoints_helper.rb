@@ -1,0 +1,2 @@
+module PathWaypointsHelper
+end
