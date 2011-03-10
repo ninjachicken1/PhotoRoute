@@ -72,6 +72,13 @@ module Admin
         begin
           User.destroy(id)
           notice = "User '#{user.name}' deleted."
+          
+          # Handle deleting yourself
+          if id == user.id.to_s
+            clear_user
+            redirect_to welcome_path
+            return
+          end
         rescue Exception => e
           logger.error "Could not delete the specified user: " + e.message
           notice = "Could not delete the specified user: " + e.message
