@@ -1,23 +1,22 @@
 %html
   %head
     %title PhotoROUTE
-    = stylesheet_link_tag 'photoroute'
-  %body#store
-    #banner<
-      = image_tag 'logo.jpg', :size => '50x40'
-      = @page_title || 'PhotoROUTE'
-    #columns
-      #side
-        %a Home
-        %br/
-        %a FAQ
-        %br/
-        %a News
-        %br/
-        %a Contact
-        %br/
-      #main
-        - for name in [:notice, :warning, :message, :error, :alert] 
-          - if flash[name]
-            %div{:id => name.to_s, 'class' => 'rails-notice'}= flash[name]
-        = yield :layout
+    = stylesheet_link_tag 'application'
+  %body
+    #header
+      .page
+        .grid_3
+          %p#brand= link_to "PhotoROUTE", '/welcome'
+        .grid_9
+          %span= "Welcome: #{User.find(session[:user_id]).name} | " if session[:user_id]
+          %span= link_to("Logout", logout_path) + " | " if session[:user_id]
+          %span FAQ 
+    #content
+      #content-primary
+        #main
+          - if flash.count > 0
+            #messages
+              - for name in [:notice, :warning, :message, :error, :alert] 
+                - if flash[name]
+                  %div{'class' => 'message #{name}'}= flash[name]          
+          = yield :layout

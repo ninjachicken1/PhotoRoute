@@ -1,0 +1,1578 @@
+.grid_3 {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0px;
+  width: 120px;
+  text-align: left;
+}
+
+.grid_9 {
+  float: right;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0px;
+  width: 680px;
+  text-align: right;
+}
+
+.grid_10 {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 780px;
+}
+
+/* line 312, ../../app/stylesheets/_960gs.sass */
+.push-1 {
+  position: relative;
+  left: 80px;
+}
+
+/* line 335, ../../app/stylesheets/_960gs.sass */
+.pull-1 {
+  position: relative;
+  left: -80px;
+}
+
+/* TYPOGRAPHY */
+@font-face {
+  font-family: "Proxima_Nova";
+  src: url("/fonts/proximanova-regular-webfont.eot?") format("eot"), url("/fonts/proximanova-regular-webfont.woff") format("woff"), url("/fonts/proximanova-regular-webfont.ttf") format("truetype"), url("/fonts/proximanova-regular-webfont.svg#svgFontName") format("svg");
+}
+
+@font-face {
+  font-family: "Proxima_Nova_Semi_Bold";
+  src: url("/fonts/proximanova-semibold-webfont.eot?") format("eot"), url("/fonts/proximanova-semibold-webfont.woff") format("woff"), url("/fonts/proximanova-semibold-webfont.ttf") format("truetype"), url("/fonts/proximanova-semibold-webfont.svg#svgFontName") format("svg");
+}
+
+/* line 87, ../../app/stylesheets/_type.sass */
+body, select, input, textarea, button {
+  font: 12px/1.5 Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #555555;
+}
+
+/* line 93, ../../app/stylesheets/_type.sass */
+pre, code, kbd, samp, var, tt, textarea {
+  font: normal 10.5px/1.25 Monaco, Courier New, sans-serif;
+  color: #595959;
+}
+/* line 67, ../../app/stylesheets/_type.sass */
+pre strong, code strong, kbd strong, samp strong, var strong, tt strong, textarea strong {
+  font: normal 10.5px/1.25 Monaco, Courier New, sans-serif;
+  color: #0d283d;
+}
+
+/* line 102, ../../app/stylesheets/_type.sass */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  padding: 20px 0 10px;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+/* line 108, ../../app/stylesheets/_type.sass */
+h1 {
+  padding-top: 10px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+/* line 113, ../../app/stylesheets/_type.sass */
+h1 strong {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova_Semi_Bold, Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 115, ../../app/stylesheets/_type.sass */
+h1 .label {
+  display: block;
+  font-size: 18px;
+}
+
+/* line 119, ../../app/stylesheets/_type.sass */
+h2, h3 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 123, ../../app/stylesheets/_type.sass */
+h2 {
+  padding-top: 12px;
+}
+/* line 125, ../../app/stylesheets/_type.sass */
+h2 strong {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova_Semi_Bold, Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  color: #3b3b3b;
+}
+
+/* line 129, ../../app/stylesheets/_type.sass */
+h4, h5 {
+  font-size: 15px;
+}
+
+/* line 132, ../../app/stylesheets/_type.sass */
+h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova_Semi_Bold, Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 135, ../../app/stylesheets/_type.sass */
+h6 {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 145, ../../app/stylesheets/_type.sass */
+address, p, blockquote, pre {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 148, ../../app/stylesheets/_type.sass */
+address, p {
+  padding-bottom: 0.75em;
+}
+
+/* line 151, ../../app/stylesheets/_type.sass */
+address {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 155, ../../app/stylesheets/_type.sass */
+p.disabled {
+  color: #999999;
+}
+
+/* line 158, ../../app/stylesheets/_type.sass */
+blockquote, pre {
+  padding: 0.75em 10px;
+}
+
+/* line 161, ../../app/stylesheets/_type.sass */
+blockquote {
+  margin-bottom: 0.75em;
+  padding-bottom: 0;
+}
+
+/* line 165, ../../app/stylesheets/_type.sass */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 168, ../../app/stylesheets/_type.sass */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 172, ../../app/stylesheets/_type.sass */
+pre {
+  margin-bottom: 0.75em;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+  background: #e3e5cf;
+  line-height: 1.5;
+}
+/* line 180, ../../app/stylesheets/_type.sass */
+pre code {
+  line-height: 1.5;
+}
+
+/* line 188, ../../app/stylesheets/_type.sass */
+a {
+  outline: none;
+  text-decoration: none;
+}
+/* line 191, ../../app/stylesheets/_type.sass */
+a:link, a:visited {
+  color: #236da6;
+  -webkit-tap-highlight-color: #236da6;
+}
+/* line 194, ../../app/stylesheets/_type.sass */
+a:focus, a:hover {
+  color: #1a517c;
+}
+/* line 196, ../../app/stylesheets/_type.sass */
+a:active {
+  color: #113652;
+}
+
+/* line 199, ../../app/stylesheets/_type.sass */
+abbr, del, dfn, ins, q, mark, s {
+  border: 0;
+  text-decoration: none;
+}
+
+/* line 203, ../../app/stylesheets/_type.sass */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #cfdbe8;
+}
+
+/* line 206, ../../app/stylesheets/_type.sass */
+ins, mark, s {
+  background: #e3e5cf;
+  color: black;
+}
+
+/* line 210, ../../app/stylesheets/_type.sass */
+del, s {
+  text-decoration: line-through;
+}
+
+/* line 213, ../../app/stylesheets/_type.sass */
+em, i, cite {
+  font-style: italic;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 216, ../../app/stylesheets/_type.sass */
+strong, b, th, mark {
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 219, ../../app/stylesheets/_type.sass */
+code, kbd, samp, var, tt {
+  background: #e3e5cf;
+  padding: 6px 12px;
+  line-height: 0;
+}
+
+/* line 224, ../../app/stylesheets/_type.sass */
+sub {
+  vertical-align: sub;
+}
+
+/* line 227, ../../app/stylesheets/_type.sass */
+sup {
+  vertical-align: super;
+}
+
+/* line 230, ../../app/stylesheets/_type.sass */
+small, sub, sup {
+  font-size: 10.5px;
+}
+
+/* line 233, ../../app/stylesheets/_type.sass */
+sub, sup {
+  line-height: 0;
+}
+
+/* line 237, ../../app/stylesheets/_type.sass */
+td small, td code, td kbd, td samp, td var, td tt {
+  display: inline-block;
+  margin-top: 1px;
+  padding-top: 10px;
+}
+/* line 241, ../../app/stylesheets/_type.sass */
+td small {
+  padding-top: 4px;
+}
+
+/* line 250, ../../app/stylesheets/_type.sass */
+ul, ol, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 253, ../../app/stylesheets/_type.sass */
+ul, ol {
+  margin-left: 20px;
+  padding-bottom: 0.75em;
+}
+
+/* line 257, ../../app/stylesheets/_type.sass */
+ul {
+  list-style: disc;
+}
+
+/* line 260, ../../app/stylesheets/_type.sass */
+ol {
+  list-style: decimal;
+}
+
+/* line 263, ../../app/stylesheets/_type.sass */
+dt {
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 272, ../../app/stylesheets/_type.sass */
+object, iframe, audio, video, time, canvas, hr, img {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 275, ../../app/stylesheets/_type.sass */
+hr {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: 0;
+  height: 1px;
+  background: #cccccc;
+  color: #cccccc;
+}
+
+/* line 284, ../../app/stylesheets/_type.sass */
+br {
+  line-height: 0;
+}
+
+/* line 287, ../../app/stylesheets/_type.sass */
+img {
+  border: 0;
+}
+
+/* line 290, ../../app/stylesheets/_type.sass */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 299, ../../app/stylesheets/_type.sass */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  display: block;
+}
+
+/* line 315, ../../app/stylesheets/_type.sass */
+::-moz-selection {
+  background: #236da6;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 317, ../../app/stylesheets/_type.sass */
+::selection {
+  background: #236da6;
+  color: white;
+  text-shadow: none;
+}
+
+/* BUTTONS */
+/* line 116, ../../app/stylesheets/_buttons.sass */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 120, ../../app/stylesheets/_buttons.sass */
+button, a.button {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  position: relative;
+  display: inline-block;
+  padding: 2px 9px;
+  border: 1px solid #cccccc;
+  border-bottom-color: #bfbfbf;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #cccccc;
+  background: -moz-linear-gradient(top, white, #cccccc);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
+  -moz-box-shadow: 0 1px 2px #999999;
+  -webkit-box-shadow: 0 1px 2px #999999;
+  box-shadow: 0 1px 2px #999999;
+  font-size: 12px;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px white;
+  color: #555555;
+  cursor: pointer;
+}
+/* line 51, ../../app/stylesheets/_buttons.sass */
+button:focus, button:hover, a.button:focus, a.button:hover {
+  outline: 0;
+  border-color: #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  background: #bfbfbf;
+  background: -moz-linear-gradient(top, #f2f2f2, #bfbfbf);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#bfbfbf));
+  color: #484848;
+}
+/* line 60, ../../app/stylesheets/_buttons.sass */
+button:active, a.button:active {
+  outline: 0;
+  border-color: #b3b3b3;
+  border-bottom-color: #a6a6a6;
+  background: #b3b3b3;
+  background: -moz-linear-gradient(top, #e6e6e6, #b3b3b3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#b3b3b3));
+  color: #3b3b3b;
+}
+/* line 69, ../../app/stylesheets/_buttons.sass */
+button.action, a.button.action {
+  border-color: #9bb4cf;
+  border-bottom-color: #8aa7c7;
+  background: #9bb4cf;
+  background: -moz-linear-gradient(top, #e9eef4, #9bb4cf);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9eef4), to(#9bb4cf));
+  text-shadow: 0 1px 2px #e0e8f0;
+  color: #1a517c;
+}
+/* line 78, ../../app/stylesheets/_buttons.sass */
+button.action:focus, button.action:hover, a.button.action:focus, a.button.action:hover {
+  border-color: #8aa7c7;
+  border-bottom-color: #799abf;
+  background: #8aa7c7;
+  background: -moz-linear-gradient(top, #d8e1ec, #8aa7c7);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8e1ec), to(#8aa7c7));
+  color: #164467;
+}
+/* line 86, ../../app/stylesheets/_buttons.sass */
+button.action:active, a.button.action:active {
+  border-color: #799abf;
+  border-bottom-color: #688db6;
+  background: #799abf;
+  background: -moz-linear-gradient(top, #c6d5e4, #799abf);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c6d5e4), to(#799abf));
+  color: #113652;
+}
+/* line 94, ../../app/stylesheets/_buttons.sass */
+button.submit, a.button.submit {
+  padding: 6px 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
+  font-size: 15px;
+  line-height: 1.25;
+}
+/* line 100, ../../app/stylesheets/_buttons.sass */
+button.disabled, button.disabled:hover, a.button.disabled, a.button.disabled:hover {
+  outline: 0;
+  border-color: #e6e6e6;
+  border-bottom-color: #d9d9d9;
+  background: #e6e6e6;
+  background: -moz-linear-gradient(top, white, #e6e6e6);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e6e6e6));
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* line 131, ../../app/stylesheets/_buttons.sass */
+.environment button, .environment a.button {
+  padding-left: 7px;
+  padding-right: 7px;
+  border-bottom-color: #b3b3b3;
+  -moz-box-shadow: 0 1px 2px #8aa7c7;
+  -webkit-box-shadow: 0 1px 2px #8aa7c7;
+  box-shadow: 0 1px 2px #8aa7c7;
+}
+/* line 137, ../../app/stylesheets/_buttons.sass */
+.environment button:focus, .environment button:hover, .environment a.button:focus, .environment a.button:hover {
+  border-bottom-color: #a6a6a6;
+}
+/* line 139, ../../app/stylesheets/_buttons.sass */
+.environment button:active, .environment a.button:active {
+  border-bottom-color: #999999;
+}
+/* line 141, ../../app/stylesheets/_buttons.sass */
+.environment button.action, .environment a.button.action {
+  border-bottom-color: #799abf;
+}
+/* line 143, ../../app/stylesheets/_buttons.sass */
+.environment button.action:focus, .environment button.action:hover, .environment a.button.action:focus, .environment a.button.action:hover {
+  border-bottom-color: #688db6;
+}
+/* line 145, ../../app/stylesheets/_buttons.sass */
+.environment button.action:active, .environment a.button.action:active {
+  border-bottom-color: #5680ae;
+}
+/* line 148, ../../app/stylesheets/_buttons.sass */
+.environment .attention a.icon, .environment .attention a .icon {
+  padding-left: 18px;
+}
+/* line 152, ../../app/stylesheets/_buttons.sass */
+.environment table.themed th button, .environment table.themed th a.button, .environment table.themed td button, .environment table.themed td a.button {
+  -moz-box-shadow: 0 1px 2px #999999;
+  -webkit-box-shadow: 0 1px 2px #999999;
+  box-shadow: 0 1px 2px #999999;
+  border-bottom-color: #bfbfbf;
+}
+/* line 155, ../../app/stylesheets/_buttons.sass */
+.environment table.themed th button:focus, .environment table.themed th button:hover, .environment table.themed th a.button:focus, .environment table.themed th a.button:hover, .environment table.themed td button:focus, .environment table.themed td button:hover, .environment table.themed td a.button:focus, .environment table.themed td a.button:hover {
+  border-bottom-color: #b3b3b3;
+}
+/* line 157, ../../app/stylesheets/_buttons.sass */
+.environment table.themed th button:active, .environment table.themed th a.button:active, .environment table.themed td button:active, .environment table.themed td a.button:active {
+  border-bottom-color: #a6a6a6;
+}
+
+/* FORMS */
+/* line 19, ../../app/stylesheets/_forms.sass */
+form {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 24, ../../app/stylesheets/_forms.sass */
+fieldset {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  position: relative;
+  padding-top: 20px;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+}
+/* line 31, ../../app/stylesheets/_forms.sass */
+fieldset h2 {
+  padding-top: 0;
+}
+/* line 33, ../../app/stylesheets/_forms.sass */
+fieldset h3 {
+  padding-bottom: 0;
+}
+/* line 35, ../../app/stylesheets/_forms.sass */
+fieldset fieldset {
+  padding: 0;
+  border-top: 0;
+}
+
+/* line 41, ../../app/stylesheets/_forms.sass */
+legend {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+/* line 43, ../../app/stylesheets/_forms.sass */
+legend span {
+  position: absolute;
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 52, ../../app/stylesheets/_forms.sass */
+.field-area {
+  padding-top: 20px;
+}
+
+/* line 58, ../../app/stylesheets/_forms.sass */
+select {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 1px solid #cccccc;
+  padding: 3px 5px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+/* line 64, ../../app/stylesheets/_forms.sass */
+select + input.text {
+  margin-top: 8px;
+}
+
+/* line 69, ../../app/stylesheets/_forms.sass */
+input, textarea {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  vertical-align: middle;
+}
+
+/* line 73, ../../app/stylesheets/_forms.sass */
+input.text, textarea {
+  border: 1px solid #cccccc;
+  padding: 3px 5px;
+  background: white url(/images/layout/bg-inset.gif) no-repeat;
+  font-size: 15px;
+}
+/* line 79, ../../app/stylesheets/_forms.sass */
+input.text[type="hidden"], textarea[type="hidden"] {
+  display: none;
+  visibility: hidden;
+}
+/* line 82, ../../app/stylesheets/_forms.sass */
+input.text:focus, textarea:focus {
+  border: 1px solid #b3b3b3;
+  background: white;
+  outline: none;
+}
+/* line 87, ../../app/stylesheets/_forms.sass */
+input.text:disabled, input.text.disabled, textarea:disabled, textarea.disabled {
+  background: #ebebeb;
+  color: #999999;
+}
+/* line 91, ../../app/stylesheets/_forms.sass */
+input.text.error, textarea.error {
+  border: 2px solid #910f0f;
+}
+
+/* line 94, ../../app/stylesheets/_forms.sass */
+textarea {
+  height: 120px;
+  overflow: auto;
+  font-size: 12px;
+  vertical-align: baseline;
+}
+
+/* line 101, ../../app/stylesheets/_forms.sass */
+input.radio, input.checkbox {
+  position: relative;
+  top: -1px;
+}
+
+/* line 107, ../../app/stylesheets/_forms.sass */
+label {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 112, ../../app/stylesheets/_forms.sass */
+label.radio, label.checkbox {
+  margin-right: 20px;
+}
+
+/* line 117, ../../app/stylesheets/_forms.sass */
+ul.choice-list {
+  list-style: none;
+  margin: 0;
+}
+/* line 121, ../../app/stylesheets/_forms.sass */
+ul.choice-list li label {
+  margin-right: 0;
+  display: block;
+  padding-bottom: 3px;
+}
+
+/* line 126, ../../app/stylesheets/_forms.sass */
+p.group {
+  padding-bottom: 0;
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+p.group:before, p.group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+p.group:after {
+  clear: both;
+}
+/* line 130, ../../app/stylesheets/_forms.sass */
+p.group label.radio, p.group label.checkbox {
+  float: left;
+  display: inline;
+}
+/* line 133, ../../app/stylesheets/_forms.sass */
+p.group label:last-child {
+  margin-right: 0;
+}
+
+/* line 138, ../../app/stylesheets/_forms.sass */
+.field {
+  zoom: 1;
+  padding: 0 0 30px;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+.field:before, .field:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+.field:after {
+  clear: both;
+}
+/* line 142, ../../app/stylesheets/_forms.sass */
+.field .field-content {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 300px;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 147, ../../app/stylesheets/_forms.sass */
+.field .field-help {
+  position: relative;
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 380px;
+  margin-right: 0;
+  padding-left: 80px;
+}
+/* line 153, ../../app/stylesheets/_forms.sass */
+.field .field-help p, .field p.note {
+  font-size: 10.5px;
+  color: #999999;
+}
+/* line 156, ../../app/stylesheets/_forms.sass */
+.field .field-help p a:link, .field .field-help p a:visited, .field p.note a:link, .field p.note a:visited {
+  color: #555555;
+}
+/* line 158, ../../app/stylesheets/_forms.sass */
+.field .field-help p a:focus, .field .field-help p a:hover, .field p.note a:focus, .field p.note a:hover {
+  color: #222222;
+}
+/* line 160, ../../app/stylesheets/_forms.sass */
+.field .field-help p a:active, .field p.note a:active {
+  color: black;
+}
+/* line 183, ../../app/stylesheets/_forms.sass */
+.field input.text, .field textarea {
+  width: 288px;
+}
+/* line 185, ../../app/stylesheets/_forms.sass */
+.field input.text.error, .field textarea.error {
+  width: 286px;
+}
+/* line 187, ../../app/stylesheets/_forms.sass */
+.field input.text.digits, .field textarea.digits {
+  width: 48px;
+}
+/* line 189, ../../app/stylesheets/_forms.sass */
+.field select {
+  width: 300px;
+}
+/* line 192, ../../app/stylesheets/_forms.sass */
+.field .select-group select {
+  width: 220px;
+  display: inline-block;
+}
+/* line 195, ../../app/stylesheets/_forms.sass */
+.field .select-group input.text {
+  display: inline-block;
+  width: 48px;
+}
+/* line 199, ../../app/stylesheets/_forms.sass */
+.field label, .field input.text, .field select, .field fieldset legend span {
+  display: block;
+}
+/* line 202, ../../app/stylesheets/_forms.sass */
+.field .select-input-group {
+  min-height: 30px;
+}
+/* line 204, ../../app/stylesheets/_forms.sass */
+.field .select-input-group select {
+  width: 150px;
+}
+/* line 206, ../../app/stylesheets/_forms.sass */
+.field .select-input-group input.text {
+  position: relative;
+  margin-top: -0.275em;
+  clear: none;
+  width: 140px;
+}
+/* line 212, ../../app/stylesheets/_forms.sass */
+.field label {
+  padding-bottom: 3px;
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 215, ../../app/stylesheets/_forms.sass */
+.field label.radio, .field label.checkbox {
+  float: none;
+  width: auto;
+  margin-right: 20px;
+  padding: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 223, ../../app/stylesheets/_forms.sass */
+.field fieldset legend span {
+  padding: 0 0 3px;
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+/* line 228, ../../app/stylesheets/_forms.sass */
+.field fieldset .field-area {
+  position: relative;
+  margin-bottom: -38px;
+  padding-top: 21px;
+  padding-bottom: 38px;
+}
+/* line 234, ../../app/stylesheets/_forms.sass */
+.field fieldset .field-help p {
+  margin-top: 1px;
+}
+/* line 237, ../../app/stylesheets/_forms.sass */
+.field fieldset label {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 248, ../../app/stylesheets/_forms.sass */
+.field .field-help p#ree-help {
+  display: none;
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  color: #555555;
+}
+/* line 253, ../../app/stylesheets/_forms.sass */
+.field p.note {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+/* line 257, ../../app/stylesheets/_forms.sass */
+.field .help-stack {
+  float: left;
+  display: inline;
+}
+/* line 261, ../../app/stylesheets/_forms.sass */
+.field p.help-stack-content {
+  margin-top: 17px;
+}
+/* line 264, ../../app/stylesheets/_forms.sass */
+.field label + p.help.oneline {
+  margin-top: 0.5em;
+}
+/* line 267, ../../app/stylesheets/_forms.sass */
+.field h3 {
+  padding-top: 0;
+}
+/* line 270, ../../app/stylesheets/_forms.sass */
+.field#database-separate {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 220px;
+  text-align: right;
+  white-space: nowrap;
+}
+/* line 278, ../../app/stylesheets/_forms.sass */
+.field#database-separate label {
+  margin: 0;
+}
+
+/* line 281, ../../app/stylesheets/_forms.sass */
+.field + p {
+  padding-bottom: 20px;
+}
+
+/* line 285, ../../app/stylesheets/_forms.sass */
+.field h3 label.radio, .field h3 label.checkbox {
+  font-style: normal;
+  font-weight: normal;
+  font-family: Proxima_Nova, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 288, ../../app/stylesheets/_forms.sass */
+.field h3 label input.radio, .field h3 label input.checkbox {
+  top: 0;
+}
+
+/* line 291, ../../app/stylesheets/_forms.sass */
+.account-name {
+  padding-bottom: 0;
+}
+
+/* line 296, ../../app/stylesheets/_forms.sass */
+td input.text, td select, td textarea {
+  font-size: 12px;
+}
+/* line 299, ../../app/stylesheets/_forms.sass */
+td .field {
+  padding-bottom: 0;
+  width: auto;
+}
+/* line 305, ../../app/stylesheets/_forms.sass */
+td .field.inline p {
+  float: left;
+  display: inline;
+  margin-right: 20px;
+}
+/* line 309, ../../app/stylesheets/_forms.sass */
+td .field.inline p:last-child {
+  margin-right: 0;
+}
+/* line 312, ../../app/stylesheets/_forms.sass */
+td .field.inline label, td .field.inline input.text {
+  clear: none;
+  float: none;
+  margin: 0;
+  vertical-align: baseline;
+}
+/* line 318, ../../app/stylesheets/_forms.sass */
+td .field.inline label {
+  display: inline-block;
+  width: auto;
+  padding-bottom: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 323, ../../app/stylesheets/_forms.sass */
+td .field.inline label.radio, td .field.inline label.checkbox {
+  display: inline-block;
+  padding-top: 5px;
+}
+/* line 327, ../../app/stylesheets/_forms.sass */
+td .field.inline select, td .field.inline input.text {
+  display: inline-block;
+}
+/* line 329, ../../app/stylesheets/_forms.sass */
+td .field.inline input.text {
+  width: 120px;
+}
+/* line 332, ../../app/stylesheets/_forms.sass */
+td .field.inline button, td .field.inline a.button {
+  vertical-align: baseline;
+}
+/* line 335, ../../app/stylesheets/_forms.sass */
+td .field p.help {
+  left: 222px;
+  width: 136px;
+}
+
+/* line 345, ../../app/stylesheets/_forms.sass */
+#stats-list select {
+  margin-right: 0;
+  width: 130px;
+}
+
+/* line 359, ../../app/stylesheets/_forms.sass */
+.label label a {
+  color: #236da6;
+}
+
+/* line 367, ../../app/stylesheets/_forms.sass */
+.app_type {
+  width: auto;
+}
+
+/* line 370, ../../app/stylesheets/_forms.sass */
+.controls {
+  clear: both;
+  padding: 20px 0;
+  border-top: 1px solid #e6e6e6;
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+.controls:before, .controls:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+.controls:after {
+  clear: both;
+}
+/* line 375, ../../app/stylesheets/_forms.sass */
+.controls ul {
+  float: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+/* line 380, ../../app/stylesheets/_forms.sass */
+.controls ul li {
+  float: left;
+  display: inline;
+  margin-right: 12px;
+}
+
+/* line 385, ../../app/stylesheets/_forms.sass */
+.plan-description .controls {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 398, ../../app/stylesheets/_forms.sass */
+form table.gems td {
+  padding-top: 0;
+}
+
+/* line 404, ../../app/stylesheets/_forms.sass */
+.fields {
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+.fields:before, .fields:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+.fields:after {
+  clear: both;
+}
+/* line 407, ../../app/stylesheets/_forms.sass */
+.fields dt {
+  font-weight: normal;
+  line-height: 1;
+}
+/* line 411, ../../app/stylesheets/_forms.sass */
+.fields dt strong {
+  font-weight: normal;
+  font-size: 24px;
+}
+/* line 417, ../../app/stylesheets/_forms.sass */
+.fields dd {
+  clear: both;
+  padding-top: 6px;
+  padding-bottom: 24px;
+  color: #999999;
+  font-size: 10.5px;
+}
+/* line 430, ../../app/stylesheets/_forms.sass */
+.fields form dl.left {
+  margin: 0 24px 0 0;
+  padding-bottom: 24px;
+  width: 240px;
+}
+/* line 434, ../../app/stylesheets/_forms.sass */
+.fields form dl.right {
+  width: 480px;
+  overflow: hidden;
+}
+/* line 439, ../../app/stylesheets/_forms.sass */
+.fields form dl.right table.gems td {
+  padding-right: 0;
+}
+/* line 441, ../../app/stylesheets/_forms.sass */
+.fields form dl.right table.gems td input[type="text"], .fields form dl.right table.gems td input[type="search"], .fields form dl.right table.gems td input[type="password"], .fields form dl.right table.gems td input.text {
+  margin-right: 12px;
+  width: 220px;
+}
+/* line 445, ../../app/stylesheets/_forms.sass */
+.fields form dt {
+  font-size: 18px;
+}
+/* line 450, ../../app/stylesheets/_forms.sass */
+.fields table th, .fields table td {
+  border-bottom: 1px solid #cccccc;
+}
+/* line 453, ../../app/stylesheets/_forms.sass */
+.fields table td {
+  color: #555555;
+}
+/* line 460, ../../app/stylesheets/_forms.sass */
+.fields table.gems th, .fields table.gems td {
+  border: 0;
+}
+/* line 463, ../../app/stylesheets/_forms.sass */
+.fields table.gems th input[type="text"], .fields table.gems th input[type="search"], .fields table.gems th input[type="password"], .fields table.gems th input.text, .fields table.gems td input[type="text"], .fields table.gems td input[type="search"], .fields table.gems td input[type="password"], .fields table.gems td input.text {
+  width: 226px;
+}
+
+/* line 468, ../../app/stylesheets/_forms.sass */
+input:invalid, textarea:invalid {
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+/* line 475, ../../app/stylesheets/_forms.sass */
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 479, ../../app/stylesheets/_forms.sass */
+.sentence .time-field {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 60px;
+  width: 90px;
+  margin-right: 0;
+}
+/* line 483, ../../app/stylesheets/_forms.sass */
+.sentence .time-field:first-child {
+  margin-left: 0;
+}
+/* line 485, ../../app/stylesheets/_forms.sass */
+.sentence label, .sentence select, .sentence input {
+  float: left;
+  display: inline;
+  margin-right: 5px;
+}
+/* line 489, ../../app/stylesheets/_forms.sass */
+.sentence label {
+  padding-bottom: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 492, ../../app/stylesheets/_forms.sass */
+.sentence select, .sentence input {
+  position: relative;
+  top: -4px;
+  width: auto;
+  vertical-align: baseline;
+}
+/* line 497, ../../app/stylesheets/_forms.sass */
+.sentence input.text {
+  top: -8px;
+  width: 68px;
+}
+/* line 500, ../../app/stylesheets/_forms.sass */
+.sentence p.note {
+  clear: both;
+}
+
+/* line 504, ../../app/stylesheets/_forms.sass */
+ul.fields li {
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+/* line 507, ../../app/stylesheets/_forms.sass */
+ul.fields h2 {
+  position: relative;
+  margin-left: -18px;
+}
+
+/* LAYOUT */
+/* line 28, ../../app/stylesheets/_layout.sass */
+html, body {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: #f8f8f8 url(images/layout/bg-noise.gif) 50% 0 repeat;
+}
+
+/* line 32, ../../app/stylesheets/_layout.sass */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* line 36, ../../app/stylesheets/_layout.sass */
+body {
+  min-width: 800px;
+}
+
+/* line 40, ../../app/stylesheets/_layout.sass */
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+.page:before, .page:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+.page:after {
+  clear: both;
+}
+
+/* line 9, ../../app/stylesheets/_header.sass */
+#header {
+  position: relative;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #ababab;
+  padding: 6px 0;
+  background: #c5c5c5 url(/images/layout/bg-header.gif) repeat-x bottom;
+  background: -moz-linear-gradient(top, #f8f8f8, #c5c5c5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
+  -moz-box-shadow: 0 1px 3px #b8b8b8;
+  -webkit-box-shadow: 0 1px 3px #b8b8b8;
+  box-shadow: 0 1px 3px #b8b8b8;
+  line-height: 16px;
+  text-shadow: 0 1px 2px #f8f8f8;
+  z-index: 10;
+  height: 21px;
+}
+/* line 32, ../../app/stylesheets/_header.sass */
+#header p#brand {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  width: 180px;
+  padding: 0;
+}
+/* line 36, ../../app/stylesheets/_header.sass */
+#header p#brand a {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  color: #910f0f;
+}
+/* line 40, ../../app/stylesheets/_header.sass */
+#header #menu {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px;
+  width: 348px;
+  float: right;
+}
+/* line 44, ../../app/stylesheets/_header.sass */
+#header #menu ul.header-links {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  float: right;
+  display: inline;
+  white-space: nowrap;
+}
+/* line 49, ../../app/stylesheets/_header.sass */
+#header #menu ul.header-links li {
+  float: left;
+  display: inline;
+  margin: 0 0 0 15px;
+}
+/* line 53, ../../app/stylesheets/_header.sass */
+#header #menu ul.header-links li:last-child {
+  padding-left: 13px;
+  background: url(/images/layout/bg-vertical-rule.png) repeat-y;
+}
+/* line 56, ../../app/stylesheets/_header.sass */
+#header #menu a#account-dropdown, #header #menu a#help-dropdown {
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 16px;
+  background: url(/images/layout/icons/icons.png) 100% -272px no-repeat;
+  line-height: 16px;
+}
+/* line 62, ../../app/stylesheets/_header.sass */
+#header #menu a#account-dropdown.ui-state-active, #header #menu a#help-dropdown.ui-state-active {
+  border: none;
+  background: url(/images/layout/icons/icons.png) 100% -291px no-repeat;
+}
+/* line 66, ../../app/stylesheets/_header.sass */
+#header a:link, #header a:visited {
+  color: #555555;
+}
+/* line 68, ../../app/stylesheets/_header.sass */
+#header a:focus, #header a:hover {
+  color: #3b3b3b;
+}
+/* line 70, ../../app/stylesheets/_header.sass */
+#header a:active {
+  color: #222222;
+}
+
+/* line 73, ../../app/stylesheets/_header.sass */
+#account-dropdown-box {
+  width: 220px;
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+#account-dropdown-box:before, #account-dropdown-box:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+#account-dropdown-box:after {
+  clear: both;
+}
+/* line 76, ../../app/stylesheets/_header.sass */
+#account-dropdown-box .user {
+  width: 210px;
+  margin: 0 5px 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid #cccccc;
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+#account-dropdown-box .user:before, #account-dropdown-box .user:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+#account-dropdown-box .user:after {
+  clear: both;
+}
+/* line 82, ../../app/stylesheets/_header.sass */
+#account-dropdown-box .user .photo {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+/* line 85, ../../app/stylesheets/_header.sass */
+#account-dropdown-box .user .name, #account-dropdown-box .user .email {
+  float: right;
+  width: 160px;
+  padding: 0;
+}
+/* line 89, ../../app/stylesheets/_header.sass */
+#account-dropdown-box .user .email {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 95, ../../app/stylesheets/_header.sass */
+#account-dropdown-box, #help-dropdown-box {
+  z-index: 5;
+}
+/* line 97, ../../app/stylesheets/_header.sass */
+#account-dropdown-box a, #account-dropdown-box a:hover, #help-dropdown-box a, #help-dropdown-box a:hover {
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 99, ../../app/stylesheets/_header.sass */
+#account-dropdown-box a[target="_blank"], #account-dropdown-box a:hover[target="_blank"], #help-dropdown-box a[target="_blank"], #help-dropdown-box a:hover[target="_blank"] {
+  background-image: none;
+}
+
+/* line 57, ../../app/stylesheets/_layout.sass */
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  zoom: 1;
+  background: url(/images/layout/bg-vertical-rule.png) 159px 0 repeat-y;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+#content:before, #content:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+#content:after {
+  clear: both;
+}
+
+/* line 61, ../../app/stylesheets/_layout.sass */
+#content-primary {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 780px;
+  position: relative;
+  left: 0px;
+  position: relative;
+  padding: 10px 0px 120px;
+  min-height: 310px;
+}
+
+/* line 68, ../../app/stylesheets/_layout.sass */
+#main {
+  position: relative;
+  margin-left: 10px;
+}
+
+/* MESSAGING */
+/* line 16, ../../app/stylesheets/_messaging.sass */
+.message {
+  position: relative;
+  margin: 0 -10px 10px;
+  border-bottom: 1px solid white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 10px;
+  background: #555555;
+  font-weight: bold;
+  font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  line-height: 1.25;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.25) inset;
+  color: #f8f8f8;
+}
+/* line 32, ../../app/stylesheets/_messaging.sass */
+.message a:link, .message a:visited {
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+/* line 35, ../../app/stylesheets/_messaging.sass */
+.message a:focus, .message a:hover {
+  border-color: white;
+}
+/* line 37, ../../app/stylesheets/_messaging.sass */
+.message a:active {
+  border-color: #e5e5e5;
+}
+/* line 40, ../../app/stylesheets/_messaging.sass */
+.message h2 {
+  padding: 0;
+  font-size: 18px;
+}
+/* line 44, ../../app/stylesheets/_messaging.sass */
+.message ul {
+  padding: 6px 0 0;
+}
+/* line 47, ../../app/stylesheets/_messaging.sass */
+.message p {
+  position: relative;
+  padding-bottom: 0;
+}
+/* line 51, ../../app/stylesheets/_messaging.sass */
+.message p a.hide {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Lucida Sans Unicode, Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  line-height: 16px;
+  color: #dfdfdf;
+}
+/* line 61, ../../app/stylesheets/_messaging.sass */
+.message + .message {
+  margin-top: -9px;
+}
+/* line 65, ../../app/stylesheets/_messaging.sass */
+.message.notices p + p {
+  border-top: 1px solid #6e6e6e;
+  margin-top: 6px;
+  padding-top: 6px;
+}
+/* line 69, ../../app/stylesheets/_messaging.sass */
+.message.notices p + p a.hide {
+  top: 5px;
+  z-index: 100;
+}
+/* line 73, ../../app/stylesheets/_messaging.sass */
+.message.error {
+  background: #910f0f;
+  color: white;
+}
+/* line 77, ../../app/stylesheets/_messaging.sass */
+.message.info {
+  background: #236da6;
+  color: white;
+}
+
+/* line 81, ../../app/stylesheets/_messaging.sass */
+.call-to-action {
+  position: relative;
+  margin: 0 -10px 20px;
+  padding: 10px 10px 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #e0e8f0;
+}
+
+/* line 86, ../../app/stylesheets/_layout.sass */
+.page-header {
+  zoom: 1;
+}
+/* line 95, ../../app/stylesheets/_globalvariables.sass */
+.page-header:before, .page-header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/* line 100, ../../app/stylesheets/_globalvariables.sass */
+.page-header:after {
+  clear: both;
+}
+/* line 88, ../../app/stylesheets/_layout.sass */
+.page-header h1 {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 540px;
+  margin-left: 0;
+  width: 530px;
+}
+/* line 93, ../../app/stylesheets/_layout.sass */
+.page-header .page-control {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin-right: 0;
+  float: right;
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+/* line 99, ../../app/stylesheets/_layout.sass */
+.page-header .page-control a.button {
+  float: right;
+}
+
+#sso {
+  overflow: hidden; }
+  #sso #sso-form, #sso #sso-details {
+    float: left;
+    display: inline; }
+  #sso #sso-form {
+    width: 320px; }
+  #sso #sso-details {
+    width: 425px; }
+    #sso #sso-details h2 {
+      padding-top: 0;
+      font-size: 14px;
+      font-weight: bold; }
+  #sso .module {
+    margin-left: 80px;
+    padding: 24px;
+    width: 320px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: #cfdbe8; }
+    #sso .module h3 {
+      padding: 12px 0 0;
+      font-size: 12px;
+      font-weight: normal; }
+  #sso #sso-details.sso-signup .module h2, #sso #sso-details.sso-signup .module h3 {
+    line-height: 1.375; }
+  #sso #sso-details.sso-signup .module h2 {
+    padding: 0;
+    font-size: 12px; }
+  #sso span.ey-account {
+    padding-top: 3px;
+    padding-bottom: 12px;
+    display: block; }
+
+.sso-update {
+  padding-bottom: 48px; }
