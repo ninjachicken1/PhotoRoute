@@ -93,6 +93,8 @@ class ImportController < AuthenticatedController
     token = @service.service_token if @service
     
     a = {}
+    puts "**** #{flickr_config[:key]}"
+    puts "**** #{flickr_config[:secret]}"
     a[:key] = $flickr_config[:key]
     a[:secret] = $flickr_config[:secret]
     a[:token] = token
