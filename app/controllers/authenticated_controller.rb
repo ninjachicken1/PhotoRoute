@@ -1,4 +1,4 @@
-class AuthenticatedController < ActionController::Base
+class AuthenticatedController < ApplicationController
   helper_method :current_user
   
   before_filter :require_login
@@ -20,4 +20,5 @@ class AuthenticatedController < ActionController::Base
       redirect_to(:controller => '/welcome')
     end
   end
+
 end

@@ -13,7 +13,7 @@
     %div
     = f.submit "Save"
 
-%div Path Points:
+%div= "Path Points: (#{link_to("Import from Flickr", :controller => 'import', :action => 'show')})"
 - form_tag path_points_path(@path) do
   - @path.path_waypoints.each do |pp|
     %div

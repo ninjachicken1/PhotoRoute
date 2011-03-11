@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110308144647) do
+ActiveRecord::Schema.define(:version => 20110311022203) do
 
   create_table "path_waypoints", :force => true do |t|
     t.integer  "path_id"
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(:version => 20110308144647) do
     t.string   "service_pwd"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "service_user"
+    t.string   "service_user_id"
+    t.string   "service_token"
   end
 
   create_table "users", :force => true do |t|

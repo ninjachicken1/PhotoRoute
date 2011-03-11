@@ -1,1 +1,17 @@
-%h1 Path Details
+%h4 Path Details
+
+%div
+  = "Id: #{@path.id}"
+%div
+  = "Name: #{@path.name}"
+%div
+  = "Description: #{@path.description}"
+
+%h4 Map
+#map_canvas{'style' => 'width:500px; height:400px'}
+
+%h4 Path Points
+- @path.path_waypoints.each do |pp|
+  %div
+    = "[#{pp.seq}] "
+    = link_to "(#{pp.waypoint.latlng}) #{pp.waypoint.image_urn}", point_path(pp.waypoint)

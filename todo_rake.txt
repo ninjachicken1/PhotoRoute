@@ -1,4 +1,8 @@
 Todo: Rake Tasks
 - create admin user at the start
-- set s3 username + password
+- create admin "role"
+- restrict '/admin' urls to admins
+
+DEPLOY:
 - set database YAML file because I pulled it out of the repository
+- engineyard deployment

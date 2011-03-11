@@ -1,0 +1,14 @@
+- if @service && !@service.service_token.blank?
+  %div Authenticated with Flickr
+  - form_tag url_for({:controller=>'import', :action=>'create'}), :method => :post do
+    = select_tag(:path_id, options_for_select(@paths.collect{|p| [p.name, p.id]}))
+    - @photos.each do |photo|
+      %div
+        = check_box_tag "photo_#{photo.id}", photo.id
+        %img{'src' => photo.url(:square)}
+        = link_to "#{photo.id} (#{photo.taken_at} #{photo.title})"
+    = submit_tag "Import Photos"
+- else
+  %div PhotoROUTE can import your photos directly from Flickr but you need to tell Flickr to allow this access.      |
+    PhotoROUTE will only be granted 'Read-Only Access' and cannot modify any of your files on Flickr.                |
+  = link_to "Authorize Access", @flickr.auth.url(:read)
