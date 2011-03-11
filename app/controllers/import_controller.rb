@@ -62,6 +62,7 @@ class ImportController < AuthenticatedController
   def flickr_token
     create_flickr_client
     @flickr.auth.frob = params[:frob]
+    puts 
     
     # Create or Update the Flickr service 
     service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
@@ -70,13 +71,12 @@ class ImportController < AuthenticatedController
     end
     service.user = current_user
     service.service_type = Service::FLICKR
-    service.service_user = @token.user_real_name
-    service.service_uname = @token.username
-    service.service_user_id = @token.user_id
+    service.service_user = @flickr.auth.token.user_real_name
+    service.service_uname = @flickr.auth.token.username
+    service.service_user_id = @flickr.auth.token.user_id
     service.service_pwd = nil
-    service.service_token = flickr.auth.token.token
+    service.service_token = @flickr.auth.token.token
     
-    debugger
     begin
       flash[:notice] = "Your Flickr account was validated.  Any of your photos tagged with 'route' are available."
       @service = service.save
