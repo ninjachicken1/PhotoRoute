@@ -65,7 +65,7 @@ class ImportController < AuthenticatedController
     
     # Create or Update the Flickr service 
     service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
-    if service
+    if service.nil?
       service = Service.new
     end
     service.user = current_user
