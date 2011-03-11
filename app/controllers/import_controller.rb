@@ -6,8 +6,10 @@ class ImportController < AuthenticatedController
     @service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
     create_flickr_client
     
-    # Retrieve list of new photos from Flickr
-    @photos = @flickr.photos.search(:user_id => @service.service_user_id, :tags => 'route')
+    if @service && !@service.service_token.nil?
+      # Retrieve list of new photos from Flickr
+      @photos = @flickr.photos.search(:user_id => @service.service_user_id, :tags => 'route')
+    end
     
     # Include user's paths for choosing a Path to import photos to
     @paths = Path.find_all_by_user_id(current_user.id, :select => "id, name")
