@@ -4,7 +4,7 @@ class ImportController < AuthenticatedController
   def show
     @photos = []
     @service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
-    create_flickr_client(@service.service_token)
+    create_flickr_client
     
     # Retrieve list of new photos from Flickr
     @photos = @flickr.photos.search(:user_id => @service.service_user_id, :tags => 'route')
@@ -17,7 +17,7 @@ class ImportController < AuthenticatedController
     checks = params.select {|k,v| k.start_with?('photo_')}
     if checks
       @service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
-      create_flickr_client(@service.service_token)
+      create_flickr_client
       
       checks.each do |check|
         # Retrieve Photo and EXIF info - save as waypoint
@@ -88,8 +88,10 @@ class ImportController < AuthenticatedController
   
   private
   
-  def create_flickr_client(token=nil)
-    # TODO: Couldn't get it to work w/out passing in the YML file
+  def create_flickr_client
+    token = nil
+    token = @service.service_token if @service
+    
     a = {}
     a[:key] = $flickr_config[:key]
     a[:secret] = $flickr_config[:secret]
