@@ -21,6 +21,8 @@ class ImportController < AuthenticatedController
       @service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
       create_flickr_client
       
+      path = Path.find(params[:path_id])
+      
       checks.each do |check|
         # Retrieve Photo and EXIF info - save as waypoint
         photo_id = check[1]
@@ -29,8 +31,6 @@ class ImportController < AuthenticatedController
           photo = search.find_by_id(photo_id)
           geo_lookup = Flickr::Photos::Geo.new(@flickr)
           geo = geo_lookup.get_location(photo_id)
-          
-          path = Path.find(params[:path_id])
           
           # Create a new Waypoint
           w = Waypoint.new
@@ -47,14 +47,16 @@ class ImportController < AuthenticatedController
           pp.waypoint = w
           pp.seq = 1
           pp.save!
+          
         rescue Exception => ex
           logger.error "An exception occurred retrieving photo and geo info for photo '#{photo_id}' and user '#{current_user.id}': #{ex.message}\n #{ex.backtrace}"
           flash[:error] = "An error occurred importing the selected photos.  Some of your photos may not have been imported."
           redirect_to "show"
-          break
+          return
         end
-        break if flash[:error]
       end
+      
+      redirect_to path_path :id => path.id
     end
   end
   
@@ -62,7 +64,6 @@ class ImportController < AuthenticatedController
   def flickr_token
     create_flickr_client
     @flickr.auth.frob = params[:frob]
-    puts 
     
     # Create or Update the Flickr service 
     service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
@@ -85,7 +86,7 @@ class ImportController < AuthenticatedController
       logger.error "An exception occurred saving the service '#{service.id}' for user '(#{current_user.id}) current_user.name'."
     end
 
-    redirct_to "show"
+    redirect_to "show"
   end
   
   private

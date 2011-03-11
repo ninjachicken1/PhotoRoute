@@ -12,7 +12,7 @@ class SubscribersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to '/landing.html' }
+        format.html { redirect_to paths_path }
       else
         flash.now[:warning] = "An error occurred trying to save the user '#{params[:user][:name]}', please try again."
       end
