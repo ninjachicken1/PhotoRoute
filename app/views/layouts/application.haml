@@ -10,7 +10,7 @@
         .grid_9
           %span= "Welcome: #{User.find(session[:user_id]).name} | " if session[:user_id]
           %span= link_to("Logout", logout_path) + " | " if session[:user_id]
-          %span FAQ 
+          %span= link_to("FAQ", page_path(:FAQ))
     #content
       #content-primary
         #main
