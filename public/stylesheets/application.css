@@ -1574,3 +1574,56 @@ body {
 
 .sso-update {
   padding-bottom: 48px; }
+
+  .controls button, .controls a.button, .controls input.submit, .controls a.submit, .controls input#submit, .form_actions button, .form_actions a.button, .form_actions input.submit, .form_actions a.submit, .form_actions input#submit, .formActions button, .formActions a.button, .formActions input.submit, .formActions a.submit, .formActions input#submit, .formactions button, .formactions a.button, .formactions input.submit, .formactions a.submit, .formactions input#submit {
+    border: 1px solid #9fb7d1;
+      border-bottom-color: #8aa7c7;
+    background: #e0e8f0;
+    background: -moz-linear-gradient(top, #f8fafc, #9bb4cf);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8fafc), to(#9bb4cf));
+    -moz-box-shadow: 0 1px 2px #999999;
+    -webkit-box-shadow: 0 1px 2px #999999;
+    box-shadow: 0 1px 2px #999999;
+    color: #1a517c;
+    text-shadow: 0 1px 2px #cfdbe8;
+    padding: 6px 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    line-height: 1.25; }
+    .controls button:hover, .controls button:focus, .controls a.button:hover, .controls a.button:focus, .controls input.submit:hover, .controls input.submit:focus, .controls a.submit:hover, .controls a.submit:focus, .controls input#submit:hover, .controls input#submit:focus, .form_actions button:hover, .form_actions button:focus, .form_actions a.button:hover, .form_actions a.button:focus, .form_actions input.submit:hover, .form_actions input.submit:focus, .form_actions a.submit:hover, .form_actions a.submit:focus, .form_actions input#submit:hover, .form_actions input#submit:focus, .formActions button:hover, .formActions button:focus, .formActions a.button:hover, .formActions a.button:focus, .formActions input.submit:hover, .formActions input.submit:focus, .formActions a.submit:hover, .formActions a.submit:focus, .formActions input#submit:hover, .formActions input#submit:focus, .formactions button:hover, .formactions button:focus, .formactions a.button:hover, .formactions a.button:focus, .formactions input.submit:hover, .formactions input.submit:focus, .formactions a.submit:hover, .formactions a.submit:focus, .formactions input#submit:hover, .formactions input#submit:focus {
+      border: 1px solid #8aa7c7;
+        border-bottom-color: #688db6;
+      background: #becee0;
+      background: -moz-linear-gradient(top, #e0e8f0, #799abf);
+      background: -webkit-gradient(linear, left top, left bottom, from(#e0e8f0), to(#799abf));
+      color: #164467; }
+    .controls button:active, .controls a.button:active, .controls input.submit:active, .controls a.submit:active, .controls input#submit:active, .form_actions button:active, .form_actions a.button:active, .form_actions input.submit:active, .form_actions a.submit:active, .form_actions input#submit:active, .formActions button:active, .formActions a.button:active, .formActions input.submit:active, .formActions a.submit:active, .formActions input#submit:active, .formactions button:active, .formactions a.button:active, .formactions input.submit:active, .formactions a.submit:active, .formactions input#submit:active {
+      border: 1px solid #93aecb;
+        border-bottom-color: #7094bb;
+      background: #c6d5e4;
+      background: -moz-linear-gradient(top, #d8e1ec, #81a1c3);
+      background: -webkit-gradient(linear, left top, left bottom, from(#d8e1ec), to(#81a1c3));
+      color: #184a71; }
+  .controls a.cancel, .form_actions a.cancel, .formActions a.cancel, .formactions a.cancel {
+    border-color: #cccccc;
+    background: #cccccc;
+    background: -moz-linear-gradient(top, white, #cccccc);
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
+    -moz-box-shadow: 0 1px 2px #999999;
+    -webkit-box-shadow: 0 1px 2px #999999;
+    box-shadow: 0 1px 2px #999999;
+    color: #555555; }
+    .controls a.cancel:hover, .controls a.cancel:focus, .form_actions a.cancel:hover, .form_actions a.cancel:focus, .formActions a.cancel:hover, .formActions a.cancel:focus, .formactions a.cancel:hover, .formactions a.cancel:focus {
+      border-color: #bfbfbf;
+      background: #bfbfbf;
+      background: -moz-linear-gradient(top, #f2f2f2, #bfbfbf);
+      background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#bfbfbf));
+      color: #484848; }
+    .controls a.cancel:active, .form_actions a.cancel:active, .formActions a.cancel:active, .formactions a.cancel:active {
+      border-color: #c6c6c6;
+      background: #c6c6c6;
+      background: -moz-linear-gradient(top, #f9f9f9, #c6c6c6);
+      background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#c6c6c6));
+      color: #4f4f4f; }
