@@ -86,7 +86,7 @@ class ImportController < AuthenticatedController
       logger.error "An exception occurred saving the service '#{service.id}' for user '(#{current_user.id}) current_user.name'."
     end
 
-    redirect_to "show"
+    redirect_to :controller => 'import', :action => 'show'
   end
   
   private

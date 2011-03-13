@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   # Authenticated pages
   map.resources :points, :controller => 'waypoints'
   map.resources :paths do |paths|
-    paths.resources :points, :controller => 'pathwaypoints'
+    paths.resources :points, :controller => 'path_waypoints'
   end
   map.conenct '/import', :controller => 'import', :action => 'show', :conditions => { :method => :get }
   map.conenct '/import', :controller => 'import', :action => 'create', :conditions => { :method => :post }

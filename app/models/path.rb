@@ -4,6 +4,5 @@ class Path < ActiveRecord::Base
   has_many :path_waypoints, :dependent => :destroy
   has_many :waypoint, :through => :path_waypoints, :dependent => :destroy
   
-  validates_uniqueness_of :name
   validates_presence_of :name, :path_type
 end
