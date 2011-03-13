@@ -1,6 +1,6 @@
 body {
     color: #563c13;
-    background: url(http://localhost:3000/images/welcome-background.png) repeat-x;
+    background: url(/images/welcome-background.png) repeat-x;
     font-size: 12px;
 }
 .rails-notice {
@@ -39,7 +39,7 @@ body {
 .content .tab {
     margin-top: 250px;
     height: 300px;
-    background: url(http://localhost:3000/images/folder-background.png) 0 0 no-repeat;
+    background: url(/images/folder-background.png) 0 0 no-repeat;
     padding: 30px 7% 0 7%;
     width: 86%;
 }
