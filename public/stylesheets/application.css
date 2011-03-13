@@ -43,7 +43,7 @@
 /* TYPOGRAPHY */
 @font-face {
   font-family: "Proxima_Nova";
-  src: url("/fonts/proximanova-regular-webfont.eot?") format("eot"), url("/fonts/proximanova-regular-webfont.woff") format("woff"), url("/fonts/proximanova-regular-webfont.ttf") format("truetype"), url("/fonts/proximanova-regular-webfont.svg#svgFontName") format("svg");
+  src: url("../fonts/proximanova-regular-webfont.eot?") format("eot"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#svgFontName") format("svg");
 }
 
 @font-face {
@@ -1167,7 +1167,7 @@ html, body {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  background: #f8f8f8 url(images/layout/bg-noise.gif) 50% 0 repeat;
+  background: #f8f8f8 url(/images/bg-noise.gif) 50% 0 repeat;
 }
 
 /* line 32, ../../app/stylesheets/_layout.sass */
@@ -1262,7 +1262,6 @@ body {
 /* line 53, ../../app/stylesheets/_header.sass */
 #header #menu ul.header-links li:last-child {
   padding-left: 13px;
-  background: url(/images/layout/bg-vertical-rule.png) repeat-y;
 }
 /* line 56, ../../app/stylesheets/_header.sass */
 #header #menu a#account-dropdown, #header #menu a#help-dropdown {
@@ -1366,7 +1365,6 @@ body {
   margin-right: auto;
   width: 800px;
   zoom: 1;
-  background: url(/images/layout/bg-vertical-rule.png) 159px 0 repeat-y;
 }
 /* line 95, ../../app/stylesheets/_globalvariables.sass */
 #content:before, #content:after {

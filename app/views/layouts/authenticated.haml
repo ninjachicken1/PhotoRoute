@@ -13,7 +13,7 @@
     :javascript
       function initialize() {
         var myOptions = {
-          zoom: 8,
+          zoom: 11,
           center: window.coords[0],
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -32,11 +32,11 @@
         });
         flightPath.setMap(map);
       }
-    %body
+    %body{'onload' => 'initialize()'}
       #header
         .page
           .grid_3
-            %p#brand= link_to "PhotoROUTE", '/welcome'
+            %p#brand= link_to "PhotoROUTE", "/welcome"
           .grid_9
             %span= "Welcome: #{User.find(session[:user_id]).name} | " if session[:user_id]
             %span= link_to("Logout", logout_path) + " | " if session[:user_id]
