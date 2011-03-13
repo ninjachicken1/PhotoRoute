@@ -1288,7 +1288,6 @@ body {
 #header a:active {
   color: #222222;
 }
-
 /* line 73, ../../app/stylesheets/_header.sass */
 #account-dropdown-box {
   width: 220px;
@@ -1627,3 +1626,35 @@ body {
       background: -moz-linear-gradient(top, #f9f9f9, #c6c6c6);
       background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#c6c6c6));
       color: #4f4f4f; }
+
+# clb
+div#navmenu {
+  position: relative;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #ababab;
+  padding: 6px 0;
+  background: #c5c5c5 url(/images/layout/bg-header.gif) repeat-x bottom;
+  background: -moz-linear-gradient(top, #f8f8f8, #c5c5c5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
+  -moz-box-shadow: 0 1px 3px #b8b8b8;
+  -webkit-box-shadow: 0 1px 3px #b8b8b8;
+  box-shadow: 0 1px 3px #b8b8b8;
+  line-height: 16px;
+  text-shadow: 0 1px 2px #f8f8f8;
+  z-index: 10;
+  height: 21px;
+}
+# clb
+div.grid_menu {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 12px;
+  width: 120px;
+  text-align: left;
+}
+

@@ -1,15 +1,33 @@
+Demo:
+- After creating path, redirect to "/import" page.
+- Design the Flickr authorization page (use side note CSS)
+- Style the 'http://www.photoroute.net/paths/12' page with the Google map
+
+* Migrate to Heroku *
+
 Functionality:
-- second tier menubar
+- second tier menubar  (Paths | Waypoints | Settings)
 - landing page
 - manage waypoints
 - manage path_waypoints
+- manage Services (and change Flickr binding)
+- manager User info (display name)
 - importing via direct upload
 - determine proper initial zoom setting based on distance from original point
 - modifications to flickr_fu
+- import any photos (not just ones tagged with 'route')
+- allow adding Geo information manually by clicking on map or entering address
+- Calculate distance and time
+- Optional "closing the route" by adding line from last waypoint to origin
+- Don't import photos that have already been imported (use regular waypoint management instead)
+- Information on Google map for each waypoint (picture, time, etc.)
 
 Appearance:
 - redo CSS styling from scratch
 - footer
+
+Validations:
+- Enforce email address for login
 
 Database:
 - indexes on tables
@@ -26,4 +44,4 @@ Rake Todo:
 
   Rake Deployment Tasks:
   - set database YAML file because I pulled it out of the repository
-  - engineyard deployment
+  - Heroku deployment

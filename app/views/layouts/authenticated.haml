@@ -41,6 +41,11 @@
             %span= "Welcome: #{User.find(session[:user_id]).name} | " if session[:user_id]
             %span= link_to("Logout", logout_path) + " | " if session[:user_id]
             %span= link_to("FAQ", page_path(:FAQ))
+      #navmenu
+        .page
+          %span= link_to("Import", :controller => "import", :action => :show) + " | "
+          %span= link_to("Paths", paths_path) + " | "
+          %span= link_to("Points", points_path) 
       #content
         #content-primary
           #main

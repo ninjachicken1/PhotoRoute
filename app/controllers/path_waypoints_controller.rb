@@ -1,2 +1,2 @@
-class PathWaypointsController < ApplicationController
+class PathWaypointsController < AuthenticatedController
 end

@@ -1,4 +1,4 @@
-class PageController < ApplicationController
+class PageController < AuthenticatedController
   def show
     
     respond_to do |format|

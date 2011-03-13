@@ -1,14 +1,37 @@
+%h1 Import Photos from Flickr
+%p
+  Here is the list of photos from your linked Flickr account that are tagged with the tag 'route'.        |
+  First, select the path you want to add points to.  Second, select one or more photos and click the      |
+  "Import Photos" link at the bottom of the page to add them to your path.
 - if @service && !@service.service_token.blank?
-  %div Authenticated with Flickr
   - form_tag url_for({:controller=>'import', :action=>'create'}), :method => :post do
+    = label_tag "Select a Path"
     = select_tag(:path_id, options_for_select(@paths.collect{|p| [p.name, p.id]}))
-    - @photos.each do |photo|
-      %div
-        = check_box_tag "photo_#{photo.id}", photo.id
-        %img{'src' => photo.url(:square)}
-        = link_to "#{photo.id} (#{photo.taken_at} #{photo.title})"
+    %br &nbsp;
+    %table{:border => '1', :style => 'border-collapse: separate; border-spacing: 0;'}
+      %tr
+        %th{:align => 'center'} Select
+        %th{:align => 'center'} Photo
+        %th{:align => 'center'} Flickr Id
+        %th{:align => 'center'} Taken At
+        %th Title
+        %th Description
+      - @photos.each do |photo|
+        %tr
+          %td{:align => 'center'}= check_box_tag "photo_#{photo.id}", photo.id
+          %td{:align => 'center'}
+            %a{'href' => "#{photo.url_photopage}", 'location' => 'photo_window'}
+              %img{'src' => photo.url(:square), :width => "50px", :height => "50px"}
+          %td{:align => 'center'}= photo.id
+          %td{:align => 'center'}= photo.taken_at
+          %td= photo.title
+          %td= photo.description
+    %br &nbsp;
     = submit_tag "Import Photos"
 - else
-  %div PhotoROUTE can import your photos directly from Flickr but you need to tell Flickr to allow this access.      |
+  %p PhotoROUTE can import your photos directly from Flickr but you need to tell Flickr to allow this access.      |
     PhotoROUTE will only be granted 'Read-Only Access' and cannot modify any of your files on Flickr.                |
-  = link_to "Authorize Access", @flickr.auth.url(:read)
+  %p &nbsp;
+  %p Click on the 'Authorize Access" link to go to Flickr, sign-in, and authorize the application.
+  %div
+    = link_to "Authorize Access", @flickr.auth.url(:read)
