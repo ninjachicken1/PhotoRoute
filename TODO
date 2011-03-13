@@ -1,1 +1,29 @@
+Functionality:
+- second tier menubar
+- landing page
+- manage waypoints
+- manage path_waypoints
+- importing via direct upload
+- determine proper initial zoom setting based on distance from original point
+- modifications to flickr_fu
+
+Appearance:
+- redo CSS styling from scratch
+- footer
+
+Database:
 - indexes on tables
+
+Security:
+- read rails security guide
+- create admin user at the start
+- create admin "role"
+- restrict '/admin' urls to admins
+
+Rake Todo:
+  rake flickr:keys API_KEY, API_SECRET    # Generates 'config/flickr.yml' in proper format
+  rake flickr:clear                       # Simply deletes the 'config/flickr.yml' file
+
+  Rake Deployment Tasks:
+  - set database YAML file because I pulled it out of the repository
+  - engineyard deployment

@@ -1,8 +1,0 @@
-Todo: Rake Tasks
-- create admin user at the start
-- create admin "role"
-- restrict '/admin' urls to admins
-
-DEPLOY:
-- set database YAML file because I pulled it out of the repository
-- engineyard deployment

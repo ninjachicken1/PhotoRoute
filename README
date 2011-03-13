@@ -1,1 +1,24 @@
 PhotoROUTE allows users to import a series of photos and render the embedded location metadata on a map.  There is no inherent application - any given route might represent a run, a commute, or a trip.
+
+Setup Instructions:
+1.  Create 'config/flickr.yml' file
+
+    # Sample 'config/flickr.yml' file:
+    --- !map:HashWithIndifferentAccess
+    key: YOUR_FLICKR_API_KEY
+    secret: YOUR_FLICKR_API_SECRET
+
+2.  Create 'config/database.yml' file.  It uses standard Rails format
+
+# Sample 'config/database.yml' file.  Add test/development sections too.
+
+  production:
+    adapter: postgresql
+    encoding: unicode
+    database: photoroute_production
+    pool: 5
+    username: USERNAME
+    password: PASSWORD
+
+
+
