@@ -25,7 +25,6 @@ class PathsController < AuthenticatedController
   end
   
   def create
-    debugger
     @path = Path.new(params[:path])
     @path.user = current_user
     @path.image_urn = "tempuri.org/image/123"
