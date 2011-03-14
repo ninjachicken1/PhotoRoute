@@ -1,0 +1,18 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    flickr_fu (0.3.0)
+      mime-types (> 0.0.0)
+      xml-magic (> 0.0.0)
+    haml (3.0.25)
+    mime-types (1.16)
+    pg (0.10.1)
+    xml-magic (0.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  flickr_fu
+  haml
+  pg
