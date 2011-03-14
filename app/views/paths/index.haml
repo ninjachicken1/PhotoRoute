@@ -1,17 +1,22 @@
 %h1 List Paths
 
-%table
+%table{:border => '1', :style => 'border-collapse: separate; border-spacing: 0;'}
   %tr
+    %th Id
     %th Name
+    %th Description
+    %th Actions
  
   - if !@paths.nil?
     - for path in @paths
       %tr
-        %td= h path.name
-        %td= link_to 'Show', { :controller => 'paths', :action => 'show', :id => path.id }
-        %td= link_to 'Edit', { :controller => 'paths', :action => 'edit', :id => path.id }
-        %td= link_to 'Destroy', { :controller => 'paths', :action => 'destroy', :id => path.id }, 
-          :confirm => 'Are you sure?', :method => :delete
+        %td= path.id
+        %td= link_to(path.name, path_path(path.id))
+        %td= h path.description
+        %td 
+          = link_to('Edit', { :controller => 'paths', :action => 'edit', :id => path.id }) + " | "
+          = link_to('Destroy', { :controller => 'paths', :action => 'destroy', :id => path.id }, 
+            :confirm => 'Are you sure?', :method => :delete)
 
 %br/
 
