@@ -1,12 +1,32 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    actionmailer (2.3.5)
+      actionpack (= 2.3.5)
+    actionpack (2.3.5)
+      activesupport (= 2.3.5)
+      rack (~> 1.0.0)
+    activerecord (2.3.5)
+      activesupport (= 2.3.5)
+    activeresource (2.3.5)
+      activesupport (= 2.3.5)
+    activesupport (2.3.5)
     flickr_fu (0.3.0)
       mime-types (> 0.0.0)
       xml-magic (> 0.0.0)
     haml (3.0.25)
     mime-types (1.16)
     pg (0.10.1)
+    rack (1.0.1)
+    rails (2.3.5)
+      actionmailer (= 2.3.5)
+      actionpack (= 2.3.5)
+      activerecord (= 2.3.5)
+      activeresource (= 2.3.5)
+      activesupport (= 2.3.5)
+      rake (>= 0.8.3)
+    rails-footnotes (3.6.7)
+    rake (0.8.7)
     xml-magic (0.1.1)
 
 PLATFORMS
@@ -16,3 +36,5 @@ DEPENDENCIES
   flickr_fu
   haml
   pg
+  rails (~> 2.3.5)
+  rails-footnotes

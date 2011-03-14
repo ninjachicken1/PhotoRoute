@@ -36,6 +36,15 @@ module Rails
   class Boot
     def run
       load_initializer
+
+      # CLB: Added for bundler support
+      Rails::Initializer.class_eval do
+        def load_gems
+          @bundler_loaded ||= Bundler.require :default, Rails.env
+        end
+      end
+      # end....bundler support
+
       Rails::Initializer.run(:set_load_path)
     end
   end
