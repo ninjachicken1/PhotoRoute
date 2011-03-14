@@ -3,11 +3,15 @@
   Here is the list of photos from your linked Flickr account that are tagged with the tag 'route'.        |
   First, select the path you want to add points to.  Second, select one or more photos and click the      |
   "Import Photos" link at the bottom of the page to add them to your path.
+  %br &nbsp;
 - if @service && !@service.service_token.blank?
   - form_tag url_for({:controller=>'import', :action=>'create'}), :method => :post do
-    = label_tag "Select a Path"
-    = select_tag(:path_id, options_for_select(@paths.collect{|p| [p.name, p.id]}))
-    %br &nbsp;
+    %p
+      = label_tag "Create a New Path: "
+      = text_field_tag :new_path, nil, :size => 40
+    %p
+      = label_tag "Or, Select an Existing Path: "
+      = select_tag(:path_id, options_for_select(@paths.collect{|p| [p.name, p.id]}))
     %table{:border => '1', :style => 'border-collapse: separate; border-spacing: 0;'}
       %tr
         %th{:align => 'center'} Select
@@ -20,7 +24,7 @@
         %tr
           %td{:align => 'center'}= check_box_tag "photo_#{photo.id}", photo.id
           %td{:align => 'center'}
-            %a{'href' => "#{photo.url_photopage}", 'location' => 'photo_window'}
+            %a{'href' => "#{photo.url_photopage}", 'target' => '_blank'}
               %img{'src' => photo.url(:square), :width => "50px", :height => "50px"}
           %td{:align => 'center'}= photo.id
           %td{:align => 'center'}= photo.taken_at

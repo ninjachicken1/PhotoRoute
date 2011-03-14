@@ -17,12 +17,28 @@ class ImportController < AuthenticatedController
   
   def create
     checks = params.select {|k,v| k.start_with?('photo_')}
-    if checks
+    
+    if params[:new_path].length == 0 && (params[:path_id].nil? || params[:path_id].length == 0)
+      flash[:error] = "You need to enter the name of a new path or select an existing path before clicking 'Import Photos'."
+      redirect_to :controller => 'import', :action => :show
+      return
+    end
+    
+    if checks.length > 0
       @service = Service.find_by_user_id_and_service_type(current_user.id, Service::FLICKR)
       create_flickr_client
       
-      path = Path.find(params[:path_id])
-      
+      path = nil
+      if !params[:new_path].nil? && params[:new_path].length > 0
+        path = Path.new
+        path.name = params[:new_path]
+        path.user = current_user
+        path.path_type = "commute"
+        path.save!
+      else
+        path = Path.find(params[:path_id])
+      end
+
       checks.each do |check|
         # Retrieve Photo and EXIF info - save as waypoint
         photo_id = check[1]
@@ -31,7 +47,7 @@ class ImportController < AuthenticatedController
           photo = search.find_by_id(photo_id)
           geo_lookup = Flickr::Photos::Geo.new(@flickr)
           geo = geo_lookup.get_location(photo_id)
-          
+
           # Create a new Waypoint
           w = Waypoint.new
           w.user = current_user
@@ -40,14 +56,14 @@ class ImportController < AuthenticatedController
           w.latlng = "#{geo.latitude},#{geo.longitude}"
           w.taken = photo.taken_at
           w.save!
-          
+
           # Assign the waypoint to the selected path
           pp = PathWaypoint.new
           pp.path = path
           pp.waypoint = w
           pp.seq = 1
           pp.save!
-          
+
         rescue Exception => ex
           logger.error "An exception occurred retrieving photo and geo info for photo '#{photo_id}' and user '#{current_user.id}': #{ex.message}\n #{ex.backtrace}"
           flash[:error] = "An error occurred importing the selected photos.  Some of your photos may not have been imported."
@@ -57,6 +73,9 @@ class ImportController < AuthenticatedController
       end
       
       redirect_to path_path :id => path.id
+    else
+      flash[:error] = "You must select one or more photos before choosing 'Import Photos'."
+      redirect_to :controller => 'import', :action => :show
     end
   end
   
@@ -96,8 +115,6 @@ class ImportController < AuthenticatedController
     token = @service.service_token if @service
     
     a = {}
-    logger.error "**** #{$flickr_config[:key]}"
-    logger.error "**** #{$flickr_config[:secret]}"
     a[:key] = $flickr_config[:key]
     a[:secret] = $flickr_config[:secret]
     a[:token] = token
