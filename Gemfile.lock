@@ -1,5 +1,5 @@
 PATH
-  remote: external/
+  remote: vendor/gems
   specs:
     flickr_fu (0.3.0)
       mime-types (> 0.0.0)
@@ -39,8 +39,6 @@ PLATFORMS
 DEPENDENCIES
   flickr_fu (= 0.3.0)!
   haml
-  mime-types
   pg
   rails (~> 2.3.11)
   rails-footnotes
-  xml-magic
