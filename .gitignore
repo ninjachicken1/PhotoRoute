@@ -2,7 +2,6 @@ log/*.log
 config/database.yml
 config/flickr.yml
 tmp/*.*
-vendor/gems/*.*
 *.DS_Store
 .bashrc
 .bundle

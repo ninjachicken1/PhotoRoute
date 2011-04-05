@@ -2,6 +2,8 @@ PATH
   remote: external/
   specs:
     flickr_fu (0.3.0)
+      mime-types (> 0.0.0)
+      xml-magic (> 0.0.0)
 
 GEM
   remote: http://rubygems.org/

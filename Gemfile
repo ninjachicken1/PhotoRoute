@@ -7,7 +7,7 @@ gem "pg"
 gem "haml"
 gem "mime-types"    # flickr_fu dependency
 gem "xml-magic"    # flickr_fu dependency
-gem "flickr_fu", "0.3.0", :path => "external"
+gem "flickr_fu", "0.3.0", :path => "vendor/gems"
 
 group :development do
   # bundler requires these gems in development
