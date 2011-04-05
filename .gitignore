@@ -5,3 +5,4 @@ tmp/*.*
 vendor/gems/*.*
 *.DS_Store
 .bashrc
+.bundle

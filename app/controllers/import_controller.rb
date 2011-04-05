@@ -47,6 +47,10 @@ class ImportController < AuthenticatedController
           photo = search.find_by_id(photo_id)
           geo_lookup = Flickr::Photos::Geo.new(@flickr)
           geo = geo_lookup.get_location(photo_id)
+          puts "************************ Taken: #{photo.taken_at}"
+          puts "************************ Uploaded: #{photo.uploaded_at}"
+          puts "************************ #{photo.inspect}"
+          puts "************************ #{geo.inspect}"
 
           # Create a new Waypoint
           w = Waypoint.new
@@ -54,7 +58,8 @@ class ImportController < AuthenticatedController
           w.source_image_urn = photo.url
           w.image_urn = "tempuri.org/#{photo.id}"
           w.latlng = "#{geo.latitude},#{geo.longitude}"
-          w.taken = photo.taken_at
+          best_date = photo.taken_at.present? ? photo.taken_at : photo.uploaded_at
+          w.taken = best_date
           w.save!
 
           # Assign the waypoint to the selected path

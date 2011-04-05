@@ -5,7 +5,9 @@ gem "rails", "~> 2.3.11"
 # bundler requires these gems in all environments
 gem "pg"
 gem "haml"
-gem "flickr_fu"
+gem "mime-types"    # flickr_fu dependency
+gem "xml-magic"    # flickr_fu dependency
+gem "flickr_fu", "0.3.0", :path => "external"
 
 group :development do
   # bundler requires these gems in development

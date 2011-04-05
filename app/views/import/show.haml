@@ -11,7 +11,7 @@
       = text_field_tag :new_path, nil, :size => 40
     %p
       = label_tag "Or, Select an Existing Path: "
-      = select_tag(:path_id, options_for_select(@paths.collect{|p| [p.name, p.id]}))
+      = select_tag(:path_id, options_for_select(@paths.collect{|p| [p.name, p.id]})) if @paths.present?
     %table{:border => '1', :style => 'border-collapse: separate; border-spacing: 0;'}
       %tr
         %th{:align => 'center'} Select
