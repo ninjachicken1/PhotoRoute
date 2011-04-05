@@ -18,8 +18,8 @@ begin
   else
     puts "***** NON-development MODE: expecting flickr ENV variables."
     # Load from ENV variables (compatible with Heroku)
-    config[:key] = ENV[:flickr_key]
-    config[:secret] = ENV[:flickr_secret]
+    config[:key] = ENV['flickr_key']
+    config[:secret] = ENV['flickr_secret']
   end
 
   # Check required keys
