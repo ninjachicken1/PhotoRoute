@@ -66,8 +66,8 @@ class ImportController < AuthenticatedController
 
         rescue Exception => ex
           logger.error "An exception occurred retrieving photo and geo info for photo '#{photo_id}' and user '#{current_user.id}': #{ex.message}\n #{ex.backtrace}"
-          flash[:error] = "An error occurred importing the selected photos.  Some of your photos may not have been imported."
-          redirect_to "show"
+          flash.now[:error] = "An error occurred importing the selected photos.  Some of your photos may not have been imported."
+          render :show
           return
         end
       end
@@ -105,7 +105,7 @@ class ImportController < AuthenticatedController
       logger.error "An exception occurred saving the service '#{service.id}' for user '(#{current_user.id}) current_user.name'."
     end
 
-    redirect_to :controller => 'import', :action => 'show'
+    redirect_to :controller => '/import', :action => 'show'
   end
   
   private
